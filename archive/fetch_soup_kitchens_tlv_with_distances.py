@@ -3,7 +3,7 @@ import pandas as pd
 import time
 from geopy.distance import geodesic
 
-API_KEY = "AIzaSyAameLuR7JEIFB7oDC-ndyqCuAUlEr2dJE"
+API_KEY = ""
 SEARCH_RADIUS = 5000
 BASE_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
 DETAILS_URL = "https://maps.googleapis.com/maps/api/place/details/json"
