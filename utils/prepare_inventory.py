@@ -195,19 +195,7 @@ def _manual_prepare_inventory() -> None:
 
     if not chosen_indices:
         print("No valid selections. Nothing to mark as expiring.")
-        # Write consistent outputs (empty expiring -> current = full)
-        processed_expiring = []
-        current_inventory = [
-            {"name": (ing.get("name") or ing.get("item")),
-             "quantity": ing.get("quantity"),
-             "unit": ing.get("unit")}
-            for ing in full_inventory
-        ]
-        _save_json(EXPIRING_INGREDIENTS_FILE, processed_expiring)
-        _save_json(CURRENT_INVENTORY_FILE, current_inventory)
-        update_expired_history(processed_expiring)
-        _print_result(current_inventory, processed_expiring)
-        return
+        raise ValueError("❌ Invalid input: No valid selections were made.")
 
     # Collect details for each chosen item
     processed_expiring = []
@@ -284,11 +272,25 @@ def prepare_inventory(mode: str = "auto") -> None:
         - "auto": Randomly selects expiring items (blacklist applied). DEFAULT.
         - "manual": Interactive selection via stdin.
     """
+
     if mode not in {"auto", "manual"}:
         raise ValueError("mode must be 'auto' or 'manual'")
 
     if mode == "auto":
         _auto_prepare_inventory()
     else:
-        _manual_prepare_inventory()
+        while True:
+            try:
+                _manual_prepare_inventory()
+                break  # success, exit loop
+            except ValueError as e:
+                if "❌ Invalid input:" in str(e):
+                    print(f"⚠️ Invalid input: {e}")
+                    retry = input("Do you want to try again? (y/n): ").strip().lower()
+                    if retry != "y":
+                        print("👉 Falling back to automatic mode...")
+                        _auto_prepare_inventory()
+                        break
+                else:
+                    raise
 
