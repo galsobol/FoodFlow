@@ -1,43 +1,46 @@
-👋 Welcome to FoodFlow!
-You are now simulating operations for 'HaSalon' restaurant in Tel Aviv, owned by chef Eyal Shani.
-Our goal is to make smart, sustainable decisions about what to cook, sell, or donate among expiring ingredients.
+input: { 2
+        1,28,27,32,18,12,9,24
+3
+1
+1
+4
+1
+1
+2
+1
+0.5
+2
+3
+1
+0.3
+2
+0.2
+6
+}
 
-For each expiring ingredient, the agent will determine the most suitable action:
-- 🍽️ Cook: A message will be sent to the chef with today’s special based on this ingredient.
-- 🍴 Sell: A message will be sent to a nearby restaurant most likely to purchase it.
-- ❤️ Donate: A pickup will be scheduled with a nearby donation center.
-
-===========================================================================
-
-Press Enter to see the magic happen...
-
-===========================================================================
-
+output: {
 📦 Current Inventory (excluding expiring):
-- Eggplant: 12 unit
 - Olive oil: 1500 ml
 - Sea salt: 500 grams
 - Parsley: 100 grams
 - Heirloom tomatoes: 10 unit
 - Garlic: 20 cloves
+- Basil: 50 grams
 - Black pepper: 300 grams
-- Lamb chops: 2 kg
 - Freekeh: 2 kg
 - Mint: 100 grams
-- Shrimp: 2.5 kg
+- Crushed tomato: 1.2 kg
 - Chili: 10 unit
 - White wine: 2 liters
+- Butter: 1 kg
 - Cream: 2 liters
-- Cauliflower: 6 unit
 - Lemon zest: 5 unit
 - Lemon: 10 unit
 - Artichoke: 6 unit
 - Zucchini: 8 unit
 - Yogurt: 500 grams
-- Duck breast: 1.5 kg
 - Rosemary: 50 grams
 - Honey: 300 grams
-- Leeks: 6 stalk
 - Dill: 50 grams
 - Beets: 5 unit
 - Labneh: 500 grams
@@ -46,20 +49,23 @@ Press Enter to see the magic happen...
 - Salt: unlimited unit
 
 ⏳ Expiring Ingredients:
-- Mushrooms: 0.78 kg (Expires in 4 days)
-- Sea bass: 2.04 fillet (Expires in 4 days)
-- Crushed tomato: 0.39 kg (Expires in 2 days)
-- Butter: 0.35 kg (Expires in 2 days)
-- Basil: 31.45 grams (Expires in 2 days)
+- Eggplant: 3.0 unit (Expires in 1 days)
+- Lamb chops: 1.0 kg (Expires in 4 days)
+- Shrimp: 1.0 kg (Expires in 1 days)
+- Cauliflower: 2.0 unit (Expires in 1 days)
+- Duck breast: 0.5 kg (Expires in 2 days)
+- Sea bass: 3.0 fillet (Expires in 1 days)
+- Leeks: 0.3 stalk (Expires in 2 days)
+- Mushrooms: 0.2 kg (Expires in 6 days)
 
 ===========================================================================
 
 🥣 choosing soup kitchen for today...
 
 Best matching soup kitchen:
-Name: בית מעשים טובים
-Address: Zeev Jabotinsky St 106, Ramat Gan
-Distance: 3.25 km
+Name: המקרר הקהילתי בצפון דיזנגוף
+Address: Dizengoff St 316, Tel Aviv-Yafo
+Distance: 1.19 km
 
 ===========================================================================
 
@@ -67,36 +73,36 @@ Distance: 3.25 km
 Recipe agent       [██████████████████████████████] 100%
 
 Best matching recipes:
-1. Charred Eggplant with Mushroom-Basil Butter and Crushed Tomato Drizzle
-   Matched expiring ingredients: Mushrooms, Basil, Butter, Crushed tomato
-   Inventory ingredients: Eggplant
+1. Fire-Roasted Eggplant with Labneh & Chili Oil
+   Matched expiring ingredients: Eggplant
+   Inventory ingredients: Olive oil, Sea salt, Garlic, Chili, Labneh, Parsley, Black pepper
    Missing ingredients: none
-   Reason: The charred eggplant with mushroom-basil butter and crushed tomato drizzle highlights HaSalon's produce-driven Israeli Mediterranean ethos and uses expiring mushrooms and basil.
-2. Mediterranean Sea Bass with Freekeh Pilaf and Lemon-Basil Sauce
-   Matched expiring ingredients: Sea bass, Basil, Butter
-   Inventory ingredients: Freekeh, Lemon
-   Missing ingredients: none
-   Reason: The Mediterranean Sea Bass with Freekeh Pilaf and Lemon-Basil Sauce highlights HaSalon's produce-driven ethos, utilizing fresh sea bass and basil.
-3. Lamb Chops with Cauliflower Purée and Chili-Honey Glaze
-   Matched expiring ingredients: Butter
-   Inventory ingredients: Lamb chops, Cauliflower, Cream, Chili, Honey, Black pepper, Salt
-   Missing ingredients: none
-   Reason: Lamb Chops with Cauliflower Purée and Chili-Honey Glaze embodies HaSalon's bold Israeli Mediterranean flavors, while utilizing butter to enhance richness.
+   Reason: The fire-roasted eggplant with labneh and chili oil embodies HaSalon's produce-driven, live-fire Israeli Mediterranean ethos, highlighting expiring eggplant's smoky depth.
+2. Spiced Lamb Chops with Freekeh & Herb Salad
+   Matched expiring ingredients: Lamb chops, Eggplant
+   Inventory ingredients: Olive oil, Garlic, Rosemary, Sea salt, Black pepper, Freekeh, Water, Parsley, Mint, Dill, Honey
+   Missing ingredients: Lemon juice
+   Reason: Spiced Lamb Chops with Freekeh and Herb Salad embodies HaSalon's Israeli Mediterranean ethos, utilizing expiring lamb chops and easily sourced lemon juice.
+3. Sea Bass & Cauliflower Purée with Leek-Mushroom Ragout
+   Matched expiring ingredients: Cauliflower, Sea bass, Leeks, Mushrooms
+   Inventory ingredients: Olive oil, Sea salt, Butter, Cream, Black pepper
+   Missing ingredients: Shallots
+   Reason: The sea bass and cauliflower purée celebrate HaSalon's produce-driven Israeli Mediterranean ethos, with missing shallots being simple to source.
 
 ===========================================================================
 
 🍽️ Running restaurant recommendation agent...
 
 Best matching restaurants:
-1. Fish Market by Meatos
-   Matched ingredients: Sea bass
-   Reason: Specializes in seafood, making sea bass a perfect match. Located 1.16km away and likely to use fresh fish.
-2. Zota Pizza
-   Matched ingredients: Crushed tomato, Basil, Butter
-   Reason: Italian-style pizzeria where crushed tomato, basil, and butter are essential ingredients. Very close (0.78km).
-3. Shtsupak
-   Matched ingredients: Sea bass, Butter
-   Reason: Seafood-focused restaurant that can use sea bass and butter in their dishes. Close by (1.2km) and a good fit.
+1. Meatbar
+   Matched ingredients: Lamb chops, Duck breast
+   Reason: Specializes in meat dishes, making lamb chops and duck breast a perfect fit. Close by (0.79km) and likely to appreciate high-quality meats.
+2. Amore Mio
+   Matched ingredients: Eggplant, Mushrooms, Sea bass
+   Reason: Italian restaurant that can use eggplant and mushrooms in pasta or pizza, and sea bass in seafood dishes. Very close (0.3km) and versatile with ingredients.
+3. Abu Gosh
+   Matched ingredients: Cauliflower, Leeks, Eggplant
+   Reason: Middle Eastern cuisine often incorporates cauliflower, leeks, and eggplant in traditional dishes. Nearby (0.87km) and a good cultural match.
 
 ===========================================================================
 
@@ -105,15 +111,15 @@ Sending request to LLM...
 Received response from LLM
 
 --- Final Decision Summary ---
-COOK   (4 items):  Mushrooms, Basil, Butter, Crushed tomato
-  ↳ Recipe: Charred Eggplant with Mushroom-Basil Butter and Crushed Tomato Drizzle
-  🧾 Reason (COOK): Highest coverage of expiring ingredients
-SELL   (1 items):  Sea bass
-  ↳ Restaurant: Fish Market by Meatos
-  🧾 Reason (SELL): High demand and stable to transport
-DONATE (0 items):  none
-  ↳ Donation Center: בית מעשים טובים
-  🧾 Reason (DONATE): No remaining expiring items to donate
+COOK   (4 items):  Cauliflower, Sea bass, Leeks, Mushrooms
+  ↳ Recipe: Sea Bass & Cauliflower Purée with Leek-Mushroom Ragout
+  🧾 Reason (COOK): highest coverage of expiring ingredients
+SELL   (1 items):  Duck breast
+  ↳ Restaurant: Meatbar
+  🧾 Reason (SELL): stable to transport and in demand
+DONATE (3 items):  Eggplant, Lamb chops, Shrimp
+  ↳ Donation Center: המקרר הקהילתי בצפון דיזנגוף
+  🧾 Reason (DONATE): short expiry and better for community benefit
 ----------------------------
 
 ===========================================================================
@@ -121,17 +127,22 @@ DONATE (0 items):  none
 🧑‍🍳 Sending selected recipe to kitchen...
 
 ================= SEND TO KITCHEN =================
-👨‍🍳  Recipe: Charred Eggplant with Mushroom-Basil Butter and Crushed Tomato Drizzle
+👨‍🍳  Recipe: Sea Bass & Cauliflower Purée with Leek-Mushroom Ragout
 ---------------------------------------------------
 🧺  Ingredients:
+  • Cauliflower
+  • Sea bass
+  • Leeks
   • Mushrooms
-  • Basil
+  • Olive oil
+  • Sea salt
   • Butter
-  • Crushed tomato
-  • Eggplant
+  • Cream
+  • Black pepper
+  • Shallots
 ---------------------------------------------------
 🧾  Chef Notes / Reason:
-  The charred eggplant with mushroom-basil butter and crushed tomato drizzle highlights HaSalon's produce-driven Israeli Mediterranean ethos and uses expiring mushrooms and basil.
+  The sea bass and cauliflower purée celebrate HaSalon's produce-driven Israeli Mediterranean ethos, with missing shallots being simple to source.
 ===================================================
 
 
@@ -140,18 +151,25 @@ DONATE (0 items):  none
 ✉️ Preparing outbound messages...
 
 ====== Message to restaurant ======
- Hi from HaSalon! We have some high-quality surplus ingredients available today and thought you might be interested:
+ Hi Meatbar, this is HaSalon! We have some high-quality surplus ingredients available today—perfect for your kitchen needs. Here’s what we’ve got:
 
-- **Sea bass**: 2.04kg fillet (expires in 4 days) – ₪95/kg = **₪193.80**
+- **Duck breast**: 0.50 kg, expires in 2 days – ₪80/kg → Total: ₪40
 
-**Bundled offer**: Take it all for **₪180**!
-Pickup available today between 14:00-18:00. Please contact us at **052-1234567** to confirm.
+**Bundled offer**: Take it all for ₪35!
+Pickup available today between 14:00-18:00. Please confirm at 052-1234567. Looking forward to hearing from you!
 
-Looking forward to hearing from you!
+====== Message to soup kitchen ======
+ Hi, this is HaSalon! We have a same-day donation of fresh ingredients for you:
+- Eggplant: 3.00 units, expires in 1 day
+- Lamb chops: 1.00 kg, expires in 4 days
+- Shrimp: 1.00 kg, expires in 1 day
+
+Pickup is possible today between 15:00-17:00. Please contact us at 052-1234567 to coordinate. Thanks!
 
 ===========================================================================
 
 📊 Checking if feedback agent should run -- asking for feedback only each 10 iterations of the agent...
-ℹ️ Only 1 runs found. Need 10 to activate feedback agent.
+ℹ️ Only 2 runs found. Need 10 to activate feedback agent.
 
 ✅ Simulation complete.
+}

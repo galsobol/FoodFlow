@@ -1,65 +1,36 @@
-👋 Welcome to FoodFlow!
-You are now simulating operations for 'HaSalon' restaurant in Tel Aviv, owned by chef Eyal Shani.
-Our goal is to make smart, sustainable decisions about what to cook, sell, or donate among expiring ingredients.
+input: {2,6,4,5,26,29,34,25,22,17,15
+1000
+5
+99
+2
+5
+2
+13
+3
+1
+6
+1
+6
+7
+3
+30
+5
+100
+1
+40
+4
+}
 
-For each expiring ingredient, the agent will determine the most suitable action:
-- 🍽️ Cook: A message will be sent to the chef with today’s special based on this ingredient.
-- 🍴 Sell: A message will be sent to a nearby restaurant most likely to purchase it.
-- ❤️ Donate: A pickup will be scheduled with a nearby donation center.
+output: {
 
-===========================================================================
-
-Press Enter to see the magic happen...
-
-===========================================================================
-
-📦 Current Inventory (excluding expiring):
-- Eggplant: 12 unit
-- Sea salt: 500 grams
-- Parsley: 100 grams
-- Heirloom tomatoes: 10 unit
-- Garlic: 20 cloves
-- Black pepper: 300 grams
-- Shrimp: 2.5 kg
-- Crushed tomato: 1.2 kg
-- Chili: 10 unit
-- White wine: 2 liters
-- Cream: 2 liters
-- Cauliflower: 6 unit
-- Lemon: 10 unit
-- Zucchini: 8 unit
-- Rosemary: 50 grams
-- Honey: 300 grams
-- Sea bass: 5 fillet
-- Leeks: 6 stalk
-- Dill: 50 grams
-- Beets: 5 unit
-- Labneh: 500 grams
-- Mushrooms: 1 kg
-- Parmesan cheese: 500 grams
-- Water: unlimited unit
-- Salt: unlimited unit
-
-⏳ Expiring Ingredients:
-- Lamb chops: 1.56 kg (Expires in 3 days)
-- Butter: 0.56 kg (Expires in 1 days)
-- Freekeh: 1.42 kg (Expires in 3 days)
-- Duck breast: 1.11 kg (Expires in 2 days)
-- Yogurt: 213.51 grams (Expires in 2 days)
-- Lemon zest: 1.51 unit (Expires in 4 days)
-- Olive oil: 771.47 ml (Expires in 3 days)
-- Basil: 17.76 grams (Expires in 4 days)
-- Artichoke: 1.94 unit (Expires in 1 days)
-- Mint: 34.07 grams (Expires in 4 days)
-
-===========================================================================
+Skipping 34: This item is not selectable (Water/Salt/unlimited).
 
 🥣 choosing soup kitchen for today...
 
 Best matching soup kitchen:
-Name: המקרר הקהילתי בצפון דיזנגוף
-Address: Dizengoff St 316, Tel Aviv-Yafo
-Distance: 1.19 km
+Name: Lasova Soup-Kitchen
+Address: Chlenov St 18, Tel Aviv-Yafo
+Distance: 3.15 km
 
 ===========================================================================
 
@@ -67,36 +38,36 @@ Distance: 1.19 km
 Recipe agent       [██████████████████████████████] 100%
 
 Best matching recipes:
-1. Fire-Grilled Lamb Chops with Freekeh, Herb Yogurt, and Lemon Zest
-   Matched expiring ingredients: Lamb chops, Butter, Freekeh, Yogurt, Lemon zest, Olive oil, Basil, Mint
-   Inventory ingredients: Garlic, Rosemary, Sea salt, Black pepper, Parsley, Water
+1. Fire-Roasted Eggplant with Rosemary-Honey Drizzle and Labneh
+   Matched expiring ingredients: Olive oil, Parsley, Heirloom tomatoes, Garlic, White wine, Rosemary, Honey, Dill
+   Inventory ingredients: Eggplant, Sea salt, Black pepper, Labneh
    Missing ingredients: none
-   Reason: Fire-Grilled Lamb Chops with Freekeh, Herb Yogurt, and Lemon Zest embodies HaSalon's Israeli Mediterranean ethos, highlighting expiring lamb chops and freekeh.
-2. Duck Breast with Artichokes, Basil Butter, and Roasted Heirloom Tomatoes
-   Matched expiring ingredients: Butter, Duck breast, Olive oil, Basil, Artichoke
-   Inventory ingredients: Heirloom tomatoes, Garlic, Chili, Sea salt
+   Reason: Fire-Roasted Eggplant with Rosemary-Honey Drizzle and Labneh embodies HaSalon's Mediterranean ethos, highlighting rosemary and honey for vibrant, produce-driven flavors.
+2. Zucchini Carpaccio with Dill, Lemon, and Creamy Parmesan
+   Matched expiring ingredients: Zucchini, Dill
+   Inventory ingredients: Lemon, Parmesan cheese
    Missing ingredients: none
-   Reason: The duck breast with artichokes, basil butter, and roasted heirloom tomatoes highlights HaSalon's Mediterranean focus, using expiring basil and duck breast.
-3. Charred Eggplant and Mint Labneh with Zucchini and Lemon Honey Vinaigrette
-   Matched expiring ingredients: Lemon zest, Olive oil, Mint
-   Inventory ingredients: Eggplant, Sea salt, Honey, Zucchini, Lemon, Labneh
+   Reason: The zucchini carpaccio highlights expiring zucchini and dill, embodying HaSalon's produce-driven Israeli Mediterranean ethos with fresh, vibrant simplicity.
+3. Mediterranean Shrimp Sauté in Tomato-White Wine Sauce
+   Matched expiring ingredients: Olive oil, Parsley, Heirloom tomatoes, Garlic, White wine, Cream, Zucchini, Rosemary, Honey, Dill
+   Inventory ingredients: Shrimp, Sea salt, Black pepper, Crushed tomato, Butter
    Missing ingredients: none
-   Reason: The charred eggplant and mint labneh dish embodies HaSalon's Israeli Mediterranean ethos, highlighting fresh produce, live fire, and expiring lemon zest.
+   Reason: The Mediterranean Shrimp Sauté highlights HaSalon's produce-driven ethos, pairing heirloom tomatoes and white wine with live-fire cooking for vibrant Israeli flavors.
 
 ===========================================================================
 
 🍽️ Running restaurant recommendation agent...
 
 Best matching restaurants:
-1. Rustico
-   Matched ingredients: Butter, Olive oil, Basil
-   Reason: Italian restaurant where butter, olive oil, and basil are commonly used. Very close (0.47km) and likely to appreciate fresh ingredients.
-2. Hummus Abu Dabi, Tel Aviv
-   Matched ingredients: Freekeh, Olive oil, Lemon zest, Yogurt
-   Reason: Middle Eastern restaurant that can use freekeh, olive oil, lemon zest, and yogurt in traditional dishes. Close (1.26km) and a good match for the cuisine.
-3. Chuma
-   Matched ingredients: Lamb chops, Mint, Olive oil
-   Reason: Mediterranean restaurant where lamb, mint, and olive oil are staples. Extremely close (0.42km) and a great fit for the ingredients.
+1. Juno
+   Matched ingredients: Olive oil, Heirloom tomatoes, Garlic, White wine
+   Reason: Mediterranean-style cafe and bar that likely uses olive oil, tomatoes, garlic, and white wine in their dishes. Very close (0.86km) and versatile for these ingredients.
+2. Loullie
+   Matched ingredients: Cream, Zucchini, Rosemary, Parsley
+   Reason: Restaurant and bar with a likely focus on European or fusion cuisine, making cream, zucchini, rosemary, and parsley a good fit. Close proximity (1.37km).
+3. The Halva Kingdom
+   Matched ingredients: Honey, Rosemary, Dill
+   Reason: Specialty restaurant that could incorporate honey, rosemary, and dill into Middle Eastern-inspired dishes. Nearby (1.71km) and unique cuisine match.
 
 ===========================================================================
 
@@ -105,15 +76,15 @@ Sending request to LLM...
 Received response from LLM
 
 --- Final Decision Summary ---
-COOK   (8 items):  Lamb chops, Butter, Freekeh, Yogurt, Lemon zest, Olive oil, Basil, Mint
-  ↳ Recipe: Fire-Grilled Lamb Chops with Freekeh, Herb Yogurt, and Lemon Zest
-  🧾 Reason (COOK): Highest coverage of expiring ingredients
-SELL   (3 items):  Freekeh, Yogurt, Lemon zest
-  ↳ Restaurant: Hummus Abu Dabi, Tel Aviv
-  🧾 Reason (SELL): High demand and stable to transport
-DONATE (1 items):  Artichoke
-  ↳ Donation Center: המקרר הקהילתי בצפון דיזנגוף
-  🧾 Reason (DONATE): Low demand and expires in 1 day
+COOK   (10 items):  Olive oil, Parsley, Heirloom tomatoes, Garlic, White wine, Cream, Zucchini, Rosemary, Honey, Dill
+  ↳ Recipe: Mediterranean Shrimp Sauté in Tomato-White Wine Sauce
+  🧾 Reason (COOK): Highest coverage of expiring ingredients.
+SELL   (0 items):  none
+  ↳ Restaurant: Juno
+  🧾 Reason (SELL): No remaining items suitable for selling to Juno.
+DONATE (0 items):  none
+  ↳ Donation Center: Lasova Soup-Kitchen
+  🧾 Reason (DONATE): No remaining items suitable for donation.
 ----------------------------
 
 ===========================================================================
@@ -121,53 +92,39 @@ DONATE (1 items):  Artichoke
 🧑‍🍳 Sending selected recipe to kitchen...
 
 ================= SEND TO KITCHEN =================
-👨‍🍳  Recipe: Fire-Grilled Lamb Chops with Freekeh, Herb Yogurt, and Lemon Zest
+👨‍🍳  Recipe: Mediterranean Shrimp Sauté in Tomato-White Wine Sauce
 ---------------------------------------------------
 🧺  Ingredients:
-  • Lamb chops
-  • Butter
-  • Freekeh
-  • Yogurt
-  • Lemon zest
   • Olive oil
-  • Basil
-  • Mint
+  • Parsley
+  • Heirloom tomatoes
   • Garlic
+  • White wine
+  • Cream
+  • Zucchini
   • Rosemary
+  • Honey
+  • Dill
+  • Shrimp
   • Sea salt
   • Black pepper
-  • Parsley
-  • Water
+  • Crushed tomato
+  • Butter
 ---------------------------------------------------
 🧾  Chef Notes / Reason:
-  Fire-Grilled Lamb Chops with Freekeh, Herb Yogurt, and Lemon Zest embodies HaSalon's Israeli Mediterranean ethos, highlighting expiring lamb chops and freekeh.
+  The Mediterranean Shrimp Sauté highlights HaSalon's produce-driven ethos, pairing heirloom tomatoes and white wine with live-fire cooking for vibrant Israeli flavors.
 ===================================================
 
 
 ===========================================================================
 
 ✉️ Preparing outbound messages...
-
-====== Message to restaurant ======
- Hi Hummus Abu Dabi, this is HaSalon! We have some high-quality surplus ingredients available today that might interest you:
-
-- **Freekeh**: 1.42 kg (expires in 3 days) - ₪25/kg → **₪35.50**
-- **Yogurt**: 213.51 g (expires in 2 days) - ₪15/250g → **₪12.80**
-- **Lemon zest**: 1.51 units (expires in 4 days) - ₪5/unit → **₪7.55**
-
-**Bundle deal**: Take all for **₪50**.
-
-Pickup is available today between 14:00-18:00. Please confirm at **052-1234567**. Looking forward to hearing from you!
-
-====== Message to soup kitchen ======
- Hi, this is HaSalon! We have a same-day donation available for pickup:
-- Artichoke: 1.94 unit, expires in 1 day
-
-Pickup window: 15:00–18:00 today. Please contact us at 052-1234567. Thanks!
+No messages generated.
 
 ===========================================================================
 
 📊 Checking if feedback agent should run -- asking for feedback only each 10 iterations of the agent...
-ℹ️ Only 8 runs found. Need 10 to activate feedback agent.
+ℹ️ Only 9 runs found. Need 10 to activate feedback agent.
 
 ✅ Simulation complete.
+}

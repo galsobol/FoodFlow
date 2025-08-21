@@ -1,65 +1,54 @@
-👋 Welcome to FoodFlow!
-You are now simulating operations for 'HaSalon' restaurant in Tel Aviv, owned by chef Eyal Shani.
-Our goal is to make smart, sustainable decisions about what to cook, sell, or donate among expiring ingredients.
+input: {1} # auto mode
 
-For each expiring ingredient, the agent will determine the most suitable action:
-- 🍽️ Cook: A message will be sent to the chef with today’s special based on this ingredient.
-- 🍴 Sell: A message will be sent to a nearby restaurant most likely to purchase it.
-- ❤️ Donate: A pickup will be scheduled with a nearby donation center.
-
-===========================================================================
-
-Press Enter to see the magic happen...
-
-===========================================================================
+output: {
 
 📦 Current Inventory (excluding expiring):
 - Eggplant: 12 unit
 - Olive oil: 1500 ml
 - Sea salt: 500 grams
-- Parsley: 100 grams
 - Garlic: 20 cloves
-- Basil: 50 grams
 - Black pepper: 300 grams
-- Lamb chops: 2 kg
 - Freekeh: 2 kg
+- Mint: 100 grams
 - Shrimp: 2.5 kg
-- Crushed tomato: 1.2 kg
 - Chili: 10 unit
 - White wine: 2 liters
 - Butter: 1 kg
+- Cream: 2 liters
 - Cauliflower: 6 unit
-- Lemon zest: 5 unit
 - Lemon: 10 unit
+- Artichoke: 6 unit
 - Zucchini: 8 unit
-- Yogurt: 500 grams
 - Duck breast: 1.5 kg
 - Rosemary: 50 grams
 - Honey: 300 grams
-- Sea bass: 5 fillet
-- Leeks: 6 stalk
 - Dill: 50 grams
+- Beets: 5 unit
 - Labneh: 500 grams
-- Mushrooms: 1 kg
 - Parmesan cheese: 500 grams
 - Water: unlimited unit
 - Salt: unlimited unit
 
 ⏳ Expiring Ingredients:
-- Heirloom tomatoes: 7.04 unit (Expires in 3 days)
-- Beets: 3.28 unit (Expires in 4 days)
-- Artichoke: 3.52 unit (Expires in 2 days)
-- Mint: 67.26 grams (Expires in 4 days)
-- Cream: 1.0 liters (Expires in 2 days)
+- Yogurt: 328.32 grams (Expires in 2 days)
+- Mushrooms: 0.62 kg (Expires in 2 days)
+- Sea bass: 2.82 fillet (Expires in 2 days)
+- Crushed tomato: 0.88 kg (Expires in 4 days)
+- Parsley: 43.89 grams (Expires in 4 days)
+- Leeks: 4.31 stalk (Expires in 2 days)
+- Basil: 34.17 grams (Expires in 2 days)
+- Heirloom tomatoes: 5.37 unit (Expires in 4 days)
+- Lamb chops: 0.62 kg (Expires in 4 days)
+- Lemon zest: 1.86 unit (Expires in 4 days)
 
 ===========================================================================
 
 🥣 choosing soup kitchen for today...
 
 Best matching soup kitchen:
-Name: Lasova Soup-Kitchen
-Address: Chlenov St 18, Tel Aviv-Yafo
-Distance: 3.15 km
+Name: אוכל לנזקקים
+Address: 4, Namal Tel Aviv, Tel Aviv-Yafo
+Distance: 1.27 km
 
 ===========================================================================
 
@@ -67,36 +56,36 @@ Distance: 3.15 km
 Recipe agent       [██████████████████████████████] 100%
 
 Best matching recipes:
-1. Charred Eggplant with Creamed Mint and Heirloom Tomato Salsa
-   Matched expiring ingredients: Heirloom tomatoes, Mint, Cream
-   Inventory ingredients: Eggplant, Olive oil, Sea salt, Garlic, Black pepper
+1. Charred Eggplant with Lemon Yogurt and Basil Oil
+   Matched expiring ingredients: Yogurt, Basil, Lemon zest
+   Inventory ingredients: Eggplant, Olive oil, Sea salt, Garlic, Black pepper, Lemon
    Missing ingredients: none
-   Reason: The charred eggplant with creamed mint and heirloom tomato salsa highlights Israeli Mediterranean flavors, celebrating HaSalon's produce-driven ethos and expiring heirloom tomatoes.
-2. Beet and Artichoke Freekeh Risotto
-   Matched expiring ingredients: Beets, Artichoke, Mint, Cream
-   Inventory ingredients: Freekeh, Butter, Parmesan cheese, Water, Salt
+   Reason: Charred Eggplant with Lemon Yogurt and Basil Oil embodies HaSalon's Mediterranean ethos, highlighting expiring yogurt and basil with vibrant, produce-driven simplicity.
+2. Sea Bass with Tomato-Leek Ragout and Parsley Gremolata
+   Matched expiring ingredients: Sea bass, Crushed tomato, Parsley, Leeks, Heirloom tomatoes, Lemon zest
+   Inventory ingredients: Olive oil, Garlic, Black pepper, Salt
    Missing ingredients: none
-   Reason: The Beet and Artichoke Freekeh Risotto highlights Israeli Mediterranean flavors, celebrating HaSalon's produce-driven ethos with vibrant beets and artichokes.
-3. Zucchini and Shrimp in Creamy Lemon Sauce
-   Matched expiring ingredients: Cream
-   Inventory ingredients: Shrimp, Zucchini, Lemon, Butter, Garlic, Sea salt, Black pepper, Lemon zest
+   Reason: The sea bass with tomato-leek ragout and parsley gremolata highlights HaSalon's Mediterranean focus, celebrating fresh, expiring produce like sea bass and tomatoes.
+3. Lamb Chops with Freekeh, Mushrooms, and Chili Butter
+   Matched expiring ingredients: Mushrooms, Lamb chops, Lemon zest
+   Inventory ingredients: Freekeh, Chili, Butter
    Missing ingredients: none
-   Reason: Zucchini and Shrimp in Creamy Lemon Sauce embodies HaSalon's Mediterranean ethos, highlighting fresh produce and utilizing cream before it expires.
+   Reason: Lamb Chops with Freekeh, Mushrooms, and Chili Butter embodies HaSalon's Israeli Mediterranean ethos, celebrating live fire cooking and seasonal ingredients.
 
 ===========================================================================
 
 🍽️ Running restaurant recommendation agent...
 
 Best matching restaurants:
-1. Sabich Complete
-   Matched ingredients: Mint, Cream
-   Reason: Sabich is a Middle Eastern dish that often includes fresh herbs like mint and creamy sauces. Extremely close (0.08km).
-2. Toto
-   Matched ingredients: Heirloom tomatoes, Cream, Artichoke
-   Reason: Toto is known for its Italian-inspired cuisine, which can use tomatoes, cream, and artichokes. Close (0.96km) and versatile for these ingredients.
-3. Humus Ronnen
-   Matched ingredients: Mint, Beets
-   Reason: Middle Eastern restaurant where mint and beets are often used in salads or sides. Nearby (0.49km) and a good fit.
+1. Barbunia
+   Matched ingredients: Sea bass, Parsley, Lemon zest
+   Reason: Seafood-focused restaurant likely to use sea bass, parsley, and lemon zest. Very close (0.88km) and a great match for the ingredients.
+2. Abu Gosh
+   Matched ingredients: Yogurt, Parsley, Lemon zest
+   Reason: Middle Eastern restaurant where yogurt, parsley, and lemon zest are commonly used. Located just 0.87km away.
+3. Rustico Rothschild
+   Matched ingredients: Crushed tomato, Basil, Heirloom tomatoes
+   Reason: Italian restaurant that can use tomatoes and basil in their dishes. Slightly farther (2.76km) but highly relevant ingredients.
 
 ===========================================================================
 
@@ -105,14 +94,14 @@ Sending request to LLM...
 Received response from LLM
 
 --- Final Decision Summary ---
-COOK   (3 items):  Beets, Mint, Cream
-  ↳ Recipe: Beet and Artichoke Freekeh Risotto
-  🧾 Reason (COOK): Highest coverage of expiring ingredients with acceptable rank.
-SELL   (1 items):  Artichoke
-  ↳ Restaurant: Toto
-  🧾 Reason (SELL): Artichoke is in demand and stable to transport.
-DONATE (1 items):  Heirloom tomatoes
-  ↳ Donation Center: Lasova Soup-Kitchen
+COOK   (6 items):  Sea bass, Crushed tomato, Parsley, Leeks, Heirloom tomatoes, Lemon zest
+  ↳ Recipe: Sea Bass with Tomato-Leek Ragout and Parsley Gremolata
+  🧾 Reason (COOK): Highest coverage of expiring ingredients.
+SELL   (2 items):  Yogurt, Basil
+  ↳ Restaurant: Abu Gosh
+  🧾 Reason (SELL): Items are in demand and stable to transport.
+DONATE (2 items):  Mushrooms, Lamb chops
+  ↳ Donation Center: אוכל לנזקקים
   🧾 Reason (DONATE): Low demand and close to expiry.
 ----------------------------
 
@@ -121,21 +110,22 @@ DONATE (1 items):  Heirloom tomatoes
 🧑‍🍳 Sending selected recipe to kitchen...
 
 ================= SEND TO KITCHEN =================
-👨‍🍳  Recipe: Beet and Artichoke Freekeh Risotto
+👨‍🍳  Recipe: Sea Bass with Tomato-Leek Ragout and Parsley Gremolata
 ---------------------------------------------------
 🧺  Ingredients:
-  • Beets
-  • Artichoke
-  • Mint
-  • Cream
-  • Freekeh
-  • Butter
-  • Parmesan cheese
-  • Water
+  • Sea bass
+  • Crushed tomato
+  • Parsley
+  • Leeks
+  • Heirloom tomatoes
+  • Lemon zest
+  • Olive oil
+  • Garlic
+  • Black pepper
   • Salt
 ---------------------------------------------------
 🧾  Chef Notes / Reason:
-  The Beet and Artichoke Freekeh Risotto highlights Israeli Mediterranean flavors, celebrating HaSalon's produce-driven ethos with vibrant beets and artichokes.
+  The sea bass with tomato-leek ragout and parsley gremolata highlights HaSalon's Mediterranean focus, celebrating fresh, expiring produce like sea bass and tomatoes.
 ===================================================
 
 
@@ -144,40 +134,29 @@ DONATE (1 items):  Heirloom tomatoes
 ✉️ Preparing outbound messages...
 
 ====== Message to restaurant ======
- Hi Toto, this is HaSalon! We have some high-quality surplus ingredients available today—perfect for your kitchen. Here's what we’ve got:
+ Hi Abu Gosh, this is HaSalon in Tel Aviv. We have some high-quality surplus ingredients available for purchase today—perfect for your kitchen needs!
 
-- Artichoke: 3.52 units (expires in 2 days) - ₪8/unit
-  Subtotal: ₪28.16
+- **Yogurt**: 328.32 grams (expires in 2 days) – ₪10 (subtotal: ₪10)
+- **Basil**: 34.17 grams (expires in 2 days) – ₪5 (subtotal: ₪5)
 
-**Bundled offer price:** ₪25 for everything.
-Pickup available today between 12:00-17:00. Please contact us at 052-1234567 to confirm.
+**Bundled offer**: Take both for ₪13!
+Pickup is available today between 14:00-18:00. Please contact us at 052-1234567 to confirm.
 
 Looking forward to hearing from you!
 
 ====== Message to soup kitchen ======
- Hi Lasova Soup-Kitchen, this is HaSalon. We have a same-day donation of fresh ingredients for you:
-- Heirloom tomatoes: 7.04 unit, expires in 3 days
+ Hi, this is HaSalon in Tel Aviv. We have a same-day donation of fresh ingredients for you:
 
-Pickup is possible today between 15:00-17:00. Please call us at 052-1234567 to coordinate. Thank you!
+- Mushrooms: 0.62 kg, expires in 2 days
+- Lamb chops: 0.62 kg, expires in 4 days
+
+Pickup is possible today between 15:00-17:00. Please contact us at 052-1234567 to coordinate.
 
 ===========================================================================
 
 📊 Checking if feedback agent should run -- asking for feedback only each 10 iterations of the agent...
-
-📣 Feedback Suggestions:
-- Labneh: reduce by ~0.3 kg
-  Reason: Labneh consistently appears with high leftover quantities (300-400 grams) and short expiration times (2-4 days).
-- Olive oil: reduce by ~0.5 liter
-  Reason: Olive oil frequently appears with significant leftover quantities (500-700 ml) and short expiration times (2-3 days).
-- Honey: reduce by ~0.2 kg
-  Reason: Honey repeatedly shows leftover quantities exceeding 200 grams with short expiration times (1-4 days).
-- Mint: reduce by ~0.05 kg
-  Reason: Mint has recurring leftovers of 50-67 grams with short expiration times (2-4 days).
-- Black pepper: reduce by ~0.15 kg
-  Reason: Black pepper consistently shows leftover quantities of 160-200 grams with short expiration times (1-4 days).
-- Eggplant: reduce by ~2 unit
-  Reason: Eggplant frequently appears with leftover quantities of 4-8 units and short expiration times (2-3 days).
-- Artichoke: reduce by ~1 unit
-  Reason: Artichoke consistently shows leftover quantities of 2-3 units with short expiration times (1-3 days).
+ℹ️ Only 1 runs found. Need 10 to activate feedback agent.
 
 ✅ Simulation complete.
+
+}

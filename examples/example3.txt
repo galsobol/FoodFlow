@@ -1,40 +1,30 @@
-👋 Welcome to FoodFlow!
-You are now simulating operations for 'HaSalon' restaurant in Tel Aviv, owned by chef Eyal Shani.
-Our goal is to make smart, sustainable decisions about what to cook, sell, or donate among expiring ingredients.
+input: {1} # auto mode
 
-For each expiring ingredient, the agent will determine the most suitable action:
-- 🍽️ Cook: A message will be sent to the chef with today’s special based on this ingredient.
-- 🍴 Sell: A message will be sent to a nearby restaurant most likely to purchase it.
-- ❤️ Donate: A pickup will be scheduled with a nearby donation center.
-
-===========================================================================
-
-Press Enter to see the magic happen...
-
-===========================================================================
-
+output: {
 📦 Current Inventory (excluding expiring):
 - Eggplant: 12 unit
 - Olive oil: 1500 ml
 - Sea salt: 500 grams
-- Parsley: 100 grams
 - Heirloom tomatoes: 10 unit
 - Garlic: 20 cloves
 - Basil: 50 grams
 - Black pepper: 300 grams
-- Mint: 100 grams
+- Lamb chops: 2 kg
+- Freekeh: 2 kg
 - Shrimp: 2.5 kg
-- Crushed tomato: 1.2 kg
 - Chili: 10 unit
+- White wine: 2 liters
 - Butter: 1 kg
 - Cream: 2 liters
-- Lemon zest: 5 unit
+- Cauliflower: 6 unit
 - Lemon: 10 unit
+- Artichoke: 6 unit
 - Zucchini: 8 unit
 - Yogurt: 500 grams
 - Duck breast: 1.5 kg
-- Rosemary: 50 grams
 - Honey: 300 grams
+- Leeks: 6 stalk
+- Dill: 50 grams
 - Labneh: 500 grams
 - Mushrooms: 1 kg
 - Parmesan cheese: 500 grams
@@ -42,15 +32,13 @@ Press Enter to see the magic happen...
 - Salt: unlimited unit
 
 ⏳ Expiring Ingredients:
-- Lamb chops: 0.64 kg (Expires in 4 days)
-- Sea bass: 3.46 fillet (Expires in 4 days)
-- Artichoke: 2.97 unit (Expires in 3 days)
-- Freekeh: 1.29 kg (Expires in 2 days)
-- White wine: 1.02 liters (Expires in 3 days)
-- Leeks: 3.3 stalk (Expires in 4 days)
-- Cauliflower: 4.01 unit (Expires in 3 days)
-- Beets: 2.74 unit (Expires in 3 days)
-- Dill: 19.44 grams (Expires in 4 days)
+- Mint: 34.8 grams (Expires in 4 days)
+- Beets: 1.52 unit (Expires in 4 days)
+- Parsley: 66.99 grams (Expires in 2 days)
+- Lemon zest: 2.52 unit (Expires in 1 days)
+- Rosemary: 32.22 grams (Expires in 2 days)
+- Sea bass: 3.77 fillet (Expires in 1 days)
+- Crushed tomato: 0.63 kg (Expires in 1 days)
 
 ===========================================================================
 
@@ -67,36 +55,36 @@ Distance: 3.15 km
 Recipe agent       [██████████████████████████████] 100%
 
 Best matching recipes:
-1. Charred Lamb Chops with Freekeh Risotto and Herb Gremolata
-   Matched expiring ingredients: Lamb chops, Freekeh, White wine
-   Inventory ingredients: Olive oil, Garlic, Parsley, Lemon zest
+1. Charred Sea Bass with Mint and Lemon Zest Salsa
+   Matched expiring ingredients: Mint, Parsley, Lemon zest, Sea bass
+   Inventory ingredients: Olive oil, Sea salt, Lemon
    Missing ingredients: none
-   Reason: Charred Lamb Chops with Freekeh Risotto and Herb Gremolata embodies HaSalon's Israeli Mediterranean ethos, celebrating live fire and expiring lamb chops.
-2. Roasted Sea Bass with Artichoke and Beet Purée
-   Matched expiring ingredients: Sea bass, Artichoke, Beets
-   Inventory ingredients: Olive oil, Sea salt, Black pepper
+   Reason: Charred Sea Bass with Mint and Lemon Zest Salsa embodies HaSalon's Mediterranean ethos, highlighting fresh produce and live fire cooking.
+2. Smoky Beet Carpaccio with Rosemary Honey Drizzle
+   Matched expiring ingredients: Beets, Parsley, Rosemary
+   Inventory ingredients: Olive oil, Sea salt, Honey
    Missing ingredients: none
-   Reason: Roasted Sea Bass with Artichoke and Beet Purée highlights fresh Mediterranean flavors and HaSalon's produce-driven ethos, perfectly aligning with its vibrant Tel Aviv roots.
-3. Whole-Roasted Cauliflower with Tahini, Herbs, and Chili Oil
-   Matched expiring ingredients: Cauliflower, Dill
-   Inventory ingredients: Olive oil, Sea salt, Parsley, Garlic, Black pepper, Chili
-   Missing ingredients: Tahini, Herbs, Chili oil
-   Reason: Whole-roasted cauliflower with tahini, herbs, and chili oil highlights Israeli Mediterranean flavors, uses expiring cauliflower and dill, and requires easily sourced additions.
+   Reason: The Smoky Beet Carpaccio with Rosemary Honey Drizzle highlights HaSalon's produce-driven ethos, celebrating Israeli Mediterranean flavors with expiring beets and rosemary.
+3. Fire-Roasted Eggplant Freekeh Salad with Crushed Tomato Dressing
+   Matched expiring ingredients: mint, parsley, lemon zest, crushed tomato
+   Inventory ingredients: eggplant, freekeh, water, salt, olive oil, garlic, chili
+   Missing ingredients: none
+   Reason: The Fire-Roasted Eggplant Freekeh Salad highlights HaSalon's Israeli Mediterranean roots, using mint and parsley to elevate its fresh, produce-driven flavors.
 
 ===========================================================================
 
 🍽️ Running restaurant recommendation agent...
 
 Best matching restaurants:
-1. Chuma
-   Matched ingredients: Lamb chops, Freekeh, Artichoke
-   Reason: Mediterranean restaurant likely to use lamb, freekeh, and artichokes in their dishes. Close by (0.42km) and a good fit for the ingredients.
-2. Sabich Complete
-   Matched ingredients: Cauliflower, Beets, Dill
-   Reason: Middle Eastern restaurant where cauliflower, beets, and dill are common. Extremely close (0.08km) and a great match for the cuisine.
-3. Neo Sushi Bar
-   Matched ingredients: Sea bass, Leeks, White wine
-   Reason: Japanese restaurant that can use sea bass, leeks, and white wine in their dishes. Slightly farther (2.61km) but a strong match for the ingredients.
+1. Humus Ronnen
+   Matched ingredients: Parsley, Lemon zest
+   Reason: Middle Eastern restaurant where parsley and lemon zest are commonly used in dishes like hummus and salads. Very close (0.49km).
+2. Barbunia
+   Matched ingredients: Sea bass, Rosemary
+   Reason: Seafood-focused restaurant that can use sea bass and rosemary in their dishes. Close proximity (0.88km).
+3. Market Vegan Restaurant
+   Matched ingredients: Mint, Beets, Parsley
+   Reason: Vegan restaurant likely to use fresh herbs like mint and parsley, as well as beets in salads or dishes. Nearby (0.89km).
 
 ===========================================================================
 
@@ -105,15 +93,15 @@ Sending request to LLM...
 Received response from LLM
 
 --- Final Decision Summary ---
-COOK   (2 items):  Sea bass, Beets
-  ↳ Recipe: Roasted Sea Bass with Artichoke and Beet Purée
-  🧾 Reason (COOK): highest coverage of expiring ingredients and lowest rank
-SELL   (1 items):  Artichoke
-  ↳ Restaurant: Chuma
-  🧾 Reason (SELL): in demand and stable to transport
-DONATE (6 items):  Lamb chops, Freekeh, White wine, Leeks, Cauliflower, Dill
+COOK   (4 items):  Mint, Parsley, Lemon zest, Sea bass
+  ↳ Recipe: Charred Sea Bass with Mint and Lemon Zest Salsa
+  🧾 Reason (COOK): Highest coverage of expiring ingredients.
+SELL   (1 items):  Beets
+  ↳ Restaurant: Market Vegan Restaurant
+  🧾 Reason (SELL): Stable to transport and in demand.
+DONATE (2 items):  Rosemary, Crushed tomato
   ↳ Donation Center: עמותת לשובע המסעדה
-  🧾 Reason (DONATE): low demand or close to expiry, better for community benefit
+  🧾 Reason (DONATE): Low demand and short time to expiry.
 ----------------------------
 
 ===========================================================================
@@ -121,18 +109,19 @@ DONATE (6 items):  Lamb chops, Freekeh, White wine, Leeks, Cauliflower, Dill
 🧑‍🍳 Sending selected recipe to kitchen...
 
 ================= SEND TO KITCHEN =================
-👨‍🍳  Recipe: Roasted Sea Bass with Artichoke and Beet Purée
+👨‍🍳  Recipe: Charred Sea Bass with Mint and Lemon Zest Salsa
 ---------------------------------------------------
 🧺  Ingredients:
+  • Mint
+  • Parsley
+  • Lemon zest
   • Sea bass
-  • Artichoke
-  • Beets
   • Olive oil
   • Sea salt
-  • Black pepper
+  • Lemon
 ---------------------------------------------------
 🧾  Chef Notes / Reason:
-  Roasted Sea Bass with Artichoke and Beet Purée highlights fresh Mediterranean flavors and HaSalon's produce-driven ethos, perfectly aligning with its vibrant Tel Aviv roots.
+  Charred Sea Bass with Mint and Lemon Zest Salsa embodies HaSalon's Mediterranean ethos, highlighting fresh produce and live fire cooking.
 ===================================================
 
 
@@ -141,31 +130,45 @@ DONATE (6 items):  Lamb chops, Freekeh, White wine, Leeks, Cauliflower, Dill
 ✉️ Preparing outbound messages...
 
 ====== Message to restaurant ======
- Hi Chuma, this is HaSalon! We have some high-quality surplus ingredients available today—here’s what we’ve got:
+ Hi Market Vegan Restaurant, this is HaSalon! We have some high-quality surplus ingredients available today—here’s what we can offer:
 
-- Artichoke: 2.97 units (expires in 3 days) - ₪8/unit = ₪23.76
+- Beets: 1.52 units (expires in 4 days) - ₪8/unit, subtotal: ₪12.16
 
-Bundle offer: Take everything for ₪20.
-Pickup window: Today, 12:00–17:00.
+Bundle offer: Take everything for ₪10!
+Pickup window: Today, 12:00–18:00.
 Contact us at 052-1234567 to confirm.
 
 Looking forward to hearing from you!
 
 ====== Message to soup kitchen ======
- Hi, this is HaSalon! We have a same-day donation of fresh ingredients for you:
+ Hi, this is HaSalon in Tel Aviv. We have a same-day donation of fresh ingredients for you:
 
-- Lamb chops: 0.64 kg, expires in 4 days
-- Freekeh: 1.29 kg, expires in 2 days
-- White wine: 1.02 liters, expires in 3 days
-- Leeks: 3.30 stalk, expires in 4 days
-- Cauliflower: 4.01 unit, expires in 3 days
-- Dill: 19.44 grams, expires in 4 days
+- Rosemary: 32.22 grams, expires in 2 days
+- Crushed tomato: 0.63 kg, expires in 1 day
 
-Pickup is possible today between 16:00-18:00. Please contact us at 052-1234567 to coordinate. Thank you!
+Pickup is available today between 16:00-18:00. Please contact us at 052-1234567 to coordinate. Thank you!
 
 ===========================================================================
 
 📊 Checking if feedback agent should run -- asking for feedback only each 10 iterations of the agent...
-ℹ️ Only 9 runs found. Need 10 to activate feedback agent.
+
+📣 Feedback Suggestions:
+- Sea bass: reduce by ~2 fillet
+  Reason: Sea bass appears frequently with high leftover quantities (e.g., 2.04, 2.95, 3.47, 3.77 fillets) and short expiration times, indicating consistent overstocking.
+- Mushrooms: reduce by ~0.5 kg
+  Reason: Mushrooms consistently appear as leftovers (e.g., 0.78, 0.62, 0.48 kg) with short expiration times, suggesting over-purchasing.
+- Basil: reduce by ~30 grams
+  Reason: Basil frequently appears as leftovers (e.g., 31.45, 32.44 grams) with short expiration times, indicating overstocking.
+- Parsley: reduce by ~50 grams
+  Reason: Parsley appears repeatedly with high leftover quantities (e.g., 64.79, 66.99, 99 grams) and short expiration times, suggesting over-purchasing.
+- Rosemary: reduce by ~20 grams
+  Reason: Rosemary shows recurring excess (e.g., 23.02, 30.0, 32.22 grams) with short expiration times, indicating consistent overstocking.
+- Beets: reduce by ~2 unit
+  Reason: Beets frequently appear as leftovers (e.g., 2.53, 2.62, 4.0 units) with short expiration times, suggesting over-purchasing.
+- Cream: reduce by ~0.5 liters
+  Reason: Cream appears multiple times with leftover quantities (e.g., 0.98, 1.4 liters) and short expiration times, indicating overstocking.
+- Honey: reduce by ~100 grams
+  Reason: Honey consistently appears as leftovers (e.g., 173.84, 100 grams) with very short expiration times, suggesting over-purchasing.
 
 ✅ Simulation complete.
+}
